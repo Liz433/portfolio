@@ -1,6 +1,45 @@
-img {
-    float: left;
-    width:  400px;
-    height: 400px;
-    object-fit: cover;
+/* all pages */
+
+
+/* home page */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* extra curriculur page */
+.curriculur_imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.curriculur_imgs img {
+    max-width: 300px;
+    max-height: auto;
+    width: 50%;
+    height: 20%;
+    margin: 10px;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.hobbies img{
+    max-width: 300px;
+    max-height: auto;
+    width: 50%;
+    height: 20%;
+    margin: 10px;
 }
