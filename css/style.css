@@ -1,4 +1,9 @@
 /* all pages */
+.active a{
+	text-decoration: none;
+    color: magenta;
+    
+}
 
 
 /* home page */
