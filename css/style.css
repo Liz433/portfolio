@@ -1,50 +1,179 @@
 /* all pages */
-.active a{
-	text-decoration: none;
-    color: magenta;
-    
+html{
+    scroll-behavior: smooth;
+    font-family: 'Monaco', Times, serif;
+    font-size: 20px;
 }
-
+h1 {
+    font-size: 35px;
+}
+.navbar {
+    background-color: #c6e2e9;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+}
+.main p{
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+}
+.active {
+	text-decoration: none;
+    color: black;   
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  nav a:hover, nav a:focus {
+    text-decoration: underline;
+  }
+  .skip a{
+    position: absolute;
+    top: -100px;
+  }
+  .skip a:focus {
+    position: absolute;
+    top: 20px;
+  }
+/* no motion */
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+  
+    .skip a{
+      -webkit-transition: none; 
+      transition: none;        
+     }
+    header{
+      background-attachment: initial;
+    }
+  }
 
 /* home page */
 .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr;
     grid-gap: 15px;
+    
 }
-
+img {
+    border: #c6e2e9 solid 5px;
+    border-radius: 10px;
+}
 .gallery img {
     width: 100%;
     height: auto;
 }
 
 /* extra curriculur page */
-.curriculur_imgs {
+.curriculur_imgs, .hobbies {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.curriculur_imgs img {
-    max-width: 300px;
-    max-height: auto;
-    width: 50%;
-    height: 20%;
-    margin: 10px;
-}
-
-.hobbies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
 }
-.hobbies img{
+.curriculur_imgs img, .hobbies img {
     max-width: 300px;
     max-height: auto;
     width: 50%;
     height: 20%;
     margin: 10px;
+}
+footer {
+    text-align: center;
+    background-color: #c6e2e9;
+}
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* tablet size */
+@media screen and (min-width:800px)  {
+    body{
+        margin: 0px; 
+    }
+    .main, .footer, h1{
+        margin: 10px;
+    }
+    .navbar {
+        top: 0px; 
+        width: 100%;
+        text-align: right;
+    }
+    h1 {
+        text-align: left;
+    }
+    h2 {
+        padding-top: 20px;
+        position: relative;
+    }
+    
+    .navbar a{
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr ;
+        grid-gap: 15px;
+    }
+
+    .curriculur_imgs, .hobbies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+ 
+}
+
+/* desktop size */
+@media screen and (min-width:1248px)  {
+    .navbar {
+        position: fixed;
+        overflow: hidden;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+    .main {
+        padding-top: 80px;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: right;
+    }
+    .navbar a{
+        font-size: 25px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    footer {
+        text-align: left;
+    }
+    .curriculur_imgs, .hobbies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
 }
