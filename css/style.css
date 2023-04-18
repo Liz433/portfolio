@@ -5,12 +5,38 @@ html{
     font-size: 20px;
     text-align: center;
 }
-*:focus {
-    border: 2px solid;
+#readtxt, #clubstxt, #hobstxt, #bajatxt, #wztxt, #wstxt, #aivtxt, #sgtxt{
+    display: none;
 }
+
+#omtxt, #breadtxt, #laketxt, #horsetxt {
+    display: none;
+} 
+
+.curriculur_imgs p{
+    font-size: 15px;
+    margin-top: 0px;
+}
+.but {
+    background-color: #c6e2e9; 
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Monaco', Times, serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* *:focus {
+    border: 2px solid;
+} */
+/* div img:focus {
+    border: 2px solid;
+} */
 li:focus {
     border: 2px solid;
 }
+
 .box4 img{
     display: none;
 }
@@ -26,11 +52,12 @@ h1 {
     text-align: center;
     display: block;
     border-radius: 10px;
+    /* margin-bottom: 10px; */
 }
 .main p{
     background-color: antiquewhite;
-    padding: 10px;
-    border-radius: 10px;
+    padding:0px;
+    border-radius: 5px;
 }
 .active {
 	text-decoration: none;
@@ -91,12 +118,12 @@ img {
 .curriculur_imgs, .hobbies {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
 .curriculur_imgs img, .hobbies img {
-    max-width: 300px;
+    max-width: 600px;
     max-height: auto;
     width: 50%;
     height: 20%;
@@ -106,18 +133,14 @@ footer {
     text-align: center;
     background-color: #c6e2e9;
 }
-/* nav a:hover, nav a:focus {
-    text-decoration: underline;
-} */
-
-/* nav a{
-    text-decoration: underline;
-} */
 
 /* tablet size */
 @media screen and (min-width:800px)  {
-    html {
-        text-align: left;
+    .but {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding:0px;
+        text-align: center;
     }
     #exp {
         font-size: 15px;
@@ -137,7 +160,7 @@ footer {
         text-align: left;
     }
     h2 {
-        padding-top: 20px;
+        /* padding-top: 20px; */
         position: relative;
     }
     
@@ -157,6 +180,17 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        font-size: 2px;
+
+    }
+    .curriculur_imgs p, .hobbies p {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    .curriculur_imgs img, .hobbies img {
+        max-width:500px;
     }
 
     .projs{
@@ -189,7 +223,7 @@ footer {
         border-radius: 0px;
     }
     .main {
-        padding-top: 80px;
+        padding-top: 90px;
     }
     h1 {
         font-size: 40px;
